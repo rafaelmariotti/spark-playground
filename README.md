@@ -11,3 +11,4 @@ Playground from Spark, with some helpful Python 3.5 scripts
 ## HowTo
 
     spark-submit ratings-counter.py
+    spark-submit friends-by-age.py
