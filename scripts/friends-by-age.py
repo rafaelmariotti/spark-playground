@@ -38,3 +38,11 @@ sorted_result = result.sortByKey()
 
 for key, value in sorted_result.collect():
     print("{} years old have an average of {} friends".format(key, value))
+
+# the 10 most popular age are
+print("\nthe most popular age are: \n")
+sorted_result = result.sortBy(lambda x: x[1])
+top10 = list(reversed(sorted_result.collect()))[1:10]
+
+for key, value in top10:
+    print("{} years old have an average of {} friends".format(key, value))
