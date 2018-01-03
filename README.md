@@ -12,3 +12,6 @@ Playground from Spark, with some helpful Python 3.5 scripts
 
     spark-submit ratings-counter.py
     spark-submit friends-by-age.py
+    spark-submit min-temperatures.py
+    spark-submit max-temperatures.py
+    spark-submit word-count.py
