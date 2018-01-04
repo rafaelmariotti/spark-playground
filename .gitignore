@@ -1,1 +1,3 @@
 .envrc
+scripts/derby.log
+scripts/metastore_db

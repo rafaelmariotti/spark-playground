@@ -13,9 +13,17 @@ spark_file = sc.textFile("dataset/books/book_example.txt")
 words = spark_file.flatMap(lambda x: re.compile(r'\W+', re.UNICODE).split(x.upper()))
 
 result = words.countByValue()
-sorted_result = result.so
+
+print("raw result:")
 
 for key, value in result.items():
     readable_word = key.encode('ascii', 'ignore')
     if (readable_word):
         print("{}: {} occurrencies".format(key, value))
+
+print("\nprinting in ascending order:\n")
+word_count = words.map(lambda x: (x, 1)).reduceByKey(lambda x, y: x + y)
+sorted_word = word_count.sortBy(lambda x: (x[1]))
+
+for key, value in sorted_word.collect():
+    print("{}: {} occurrencies".format(key, value))
