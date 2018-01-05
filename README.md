@@ -18,3 +18,4 @@ Playground from Spark, with some helpful Python 3.5 scripts
     spark-submit word-count.py
     spark-submit customer-amount.py
     spark-submit popular-movies.py
+    spark-submit popular-superhero.py
