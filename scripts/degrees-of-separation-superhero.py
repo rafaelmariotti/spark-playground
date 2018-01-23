@@ -64,13 +64,13 @@ def bfsReduce(data1, data2):
     new_edge = []
 
     # combine all superhero friends in a single array
-    if(len(edge1) > 0):
-        new_edge.append(edge1)
-    if(len(edge2) > 0):
-        new_edge.append(edge2)
+    if (len(edge1) > 0):
+        new_edge.extend(edge1)
+    if (len(edge2) > 0):
+        new_edge.extend(edge2)
 
     # save the minimum distance to set
-    if(distance1 < distance):
+    if (distance1 < distance):
         distance = distance1
 
     if (distance2 < distance):
@@ -78,16 +78,16 @@ def bfsReduce(data1, data2):
 
     # preserve darkest color
     # if one of the nodes was already processed, set as GRAY or BLACK
-    if(color1 == 'WHITE' and (color2 == 'GRAY' or color2 == 'BLACK')):
+    if (color1 == 'WHITE' and (color2 == 'GRAY' or color2 == 'BLACK')):
         color = color2
-    if(color1 == 'GRAY' and color2 == 'BLACK'):
-        color = 'BLACK'
-    if(color2 == 'WHITE' and (color1 == 'GRAY' or color1 == 'BLACK')):
-        color = color1
 
+    if (color1 == 'GRAY' and color2 == 'BLACK'):
+        color = 'BLACK'
+
+    if (color2 == 'WHITE' and (color1 == 'GRAY' or color1 == 'BLACK')):
+        color = color1
     # if one of the nodes was already processed and finished
-    
-    if(color2 == 'GRAY' and color1 == 'BLACK'):
+    if (color2 == 'GRAY' and color1 == 'BLACK'):
         color = 'BLACK'
 
     return (new_edge, distance, color)
