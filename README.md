@@ -19,3 +19,5 @@ Playground from Spark, with some helpful Python 3.5 scripts
     spark-submit customer-amount.py
     spark-submit popular-movies.py
     spark-submit popular-superhero.py
+    spark-submit degrees-of-separation-superhero.py
+    spark-submit movie-similarities.py ${movie_id}
