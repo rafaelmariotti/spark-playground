@@ -71,7 +71,7 @@ ratings_combined_without_duplicate = ratings_combined.filter(filter_duplicates)
 movie_pairs = ratings_combined_without_duplicate.map(create_pair)
 
 # group all ratings from same (movieID, movieID) tuple, generating something like
-# ((movieID, movieID), ((rating, rating), (rating, rating), (rating, rating), (rating, rating)), ...)
+# ((movieID, movieID), ((rating, rating), (rating, rating), (rating, rating), (rating, rating), ...))
 group_movie_pair_ratings = movie_pairs.groupByKey()
 
 # calculate similarities between two movies
