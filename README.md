@@ -9,7 +9,7 @@ Playground from Spark, with some helpful Python 3.5 scripts
     echo 'export PATH="\${SPARK_HOME}/bin:\${PATH}"' >> ~/.bash_profile
 
 ## HowTo
-    cd scripts/
+    cd batch/
 
     spark-submit ratings-counter.py
     spark-submit friends-by-age.py
